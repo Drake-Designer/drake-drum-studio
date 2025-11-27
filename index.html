@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drake Drum Studio - Private Drum Lessons for Beginners</title>
+    <meta
+      name="description"
+      content="Professional drum lessons for beginners. Learn timing, coordination, and groove with Drake Drum Studio."
+    />
+
+    <!-- Favicon - Multiple formats for maximum compatibility -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/assets/images/favicon/favicon-96x96.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-music-note-beamed me-2"></i>
+          Drake Drum Studio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#recording">Recording</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lessons">Lessons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center py-5">
+          <div class="col-lg-6 hero-content">
+            <h1 class="hero-title mb-4">Private drum lessons for beginners</h1>
+            <p class="hero-subtitle mb-5">
+              In person drum lessons for beginners in a relaxed and friendly environment. Learn timing, coordination, and rhythm
+              at your own pace.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary btn-lg me-3 mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                <i class="bi bi-calendar-check me-2"></i>
+                Book a trial lesson
+              </button>
+              <button class="btn btn-outline-light btn-lg mb-3" onclick="smoothScroll('#lessons')">
+                <i class="bi bi-arrow-down-circle me-2"></i>
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-video-wrapper">
+              <button class="video-unmute-btn" id="unmuteBtn" aria-label="Unmute video">
+                <i class="bi bi-volume-mute"></i>
+              </button>
+              <video autoplay muted loop playsinline preload="auto" controls class="hero-video" id="heroVideo">
+                <source src="assets/videos/hero/video-mix.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-gradient"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title mb-4">About Drake Drum Studio</h2>
+            <p class="lead mb-4">
+              Hello! My name is Dario, and I'm an Italian drummer based in Ireland. I started my drumming journey at age 16, and
+              I've been passionate about music and drumming ever since!
+            </p>
+            <p class="mb-4">
+              I studied at a drum academy in Sicily and continued learning as a self-taught drummer. Over the years, I've gained
+              valuable experience playing live gigs and recording in home studios. Now, I'm excited to share my love for drumming
+              with beginners in a fun, relaxed, and encouraging environment.
+            </p>
+            <p class="mb-4">
+              Whether you want to play your favorite songs, jam with friends, or simply explore rhythm and groove, I'll guide you
+              step by step. Let's make music together!
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-music-note-list"></i>
+              </div>
+              <h4>Live Gigs</h4>
+              <p>Years of experience performing with bands in various genres</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h4>Home Studio</h4>
+              <p>Professional recording experience and production knowledge</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h4>Beginner-Friendly</h4>
+              <p>Patient teaching focused on building confidence and having fun</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recording Services Section -->
+    <section id="recording" class="recording-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">
+            <i class="bi bi-disc me-2"></i>
+            Professional Drum Tracks Recording
+          </h2>
+          <p class="lead">I record custom drum tracks for your songs. Quality sound, quick delivery, and easy collaboration.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-music-note-list"></i>
+              </div>
+              <h4 class="mb-3">For Any Project</h4>
+              <p>
+                Need drums for an original song, a cover, or a full album? I can record parts that fit your music perfectly. I
+                work with all styles and genres, so just send me what you're working on.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-soundwave"></i>
+              </div>
+              <h4 class="mb-3">Studio-Quality Sound</h4>
+              <p>
+                I use high-end drum software and professional audio gear to get the best sound. Whether you want realistic
+                acoustic drums or modern electronic vibes, I'll match the style your song needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4 class="mb-3">Experienced & Collaborative</h4>
+              <p>
+                I've worked with different artists and projects over the years, and I really enjoy the collaboration process.
+                We'll talk through your ideas and I'll make sure the drums support your vision.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-sliders"></i>
+              </div>
+              <h4 class="mb-3">Flexible Delivery</h4>
+              <p>
+                You can get the tracks however you need them: individual drum stems, pre-mixed groups, or a ready-to-use stereo
+                file. Everything is edited clean and ready to drop into your session.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h4 class="mb-3">Fast Turnaround</h4>
+              <p>
+                I know you've got deadlines. Once we're clear on what you need, I'll get your tracks done quickly without cutting
+                corners. Fast and reliable, every time.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="recording-card h-100">
+              <div class="recording-icon mb-3">
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <h4 class="mb-3">Easy Communication</h4>
+              <p>
+                From the first message to the final files, we'll keep things simple and clear. Send me your songs, reference
+                tracks, and any feedback. I'm here to help bring your music to life.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#contact" class="btn btn-primary btn-lg recording-cta">
+            <i class="bi bi-envelope-plus me-2"></i>
+            Request a Drum Track
+          </a>
+          <p class="mt-3 text-muted small">Send me a message and let's talk about your project</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessons" class="lessons-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">Lessons</h2>
+          <p class="lead">In person drum lessons tailored to your level and goals</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="lesson-card card h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="lesson-icon mb-3">
+                  <i class="bi bi-music-note-beamed"></i>
+                </div>
+                <h3 class="card-title h4 mb-3">Beginner Basics</h3>
+                <p class="mb-3">Start from zero with clear and simple exercises.</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                  <li class="list-group-item">How to hold sticks correctly</li>
+                  <li class="list-group-item">Basic drum kit setup</li>
+                  <li class="list-group-item">Simple beats and patterns</li>
+                  <li class="list-group-item">Reading basic notation</li>
+                </ul>
+                <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#beginnerModal">
+                  More details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="lesson-card card h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="lesson-icon mb-3">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <h3 class="card-title h4 mb-3">Groove & Timing</h3>
+                <p class="mb-3">Build solid rhythm and learn to keep steady time.</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                  <li class="list-group-item">Playing with metronome</li>
+                  <li class="list-group-item">Different music styles</li>
+                  <li class="list-group-item">Developing your feel</li>
+                  <li class="list-group-item">Coordination exercises</li>
+                </ul>
+                <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#grooveModal">
+                  More details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="lesson-card card h-100">
+              <div class="card-body d-flex flex-column">
+                <div class="lesson-icon mb-3">
+                  <i class="bi bi-vinyl"></i>
+                </div>
+                <h3 class="card-title h4 mb-3">Play Along with Songs</h3>
+                <p class="mb-3">Learn your favorite songs and play along with recordings.</p>
+                <ul class="list-group list-group-flush mb-4 flex-grow-1">
+                  <li class="list-group-item">Break down popular songs</li>
+                  <li class="list-group-item">Learn fills and transitions</li>
+                  <li class="list-group-item">Build a repertoire</li>
+                  <li class="list-group-item">Play with backing tracks</li>
+                </ul>
+                <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#songsModal">
+                  More details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">What you will work on</h2>
+          <p class="lead">Building strong foundations for your drumming journey</p>
+        </div>
+
+        <div id="skillsCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#skillsCarousel" data-bs-slide-to="3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-content text-center p-5">
+                <i class="bi bi-clock-history carousel-icon mb-4"></i>
+                <h3 class="mb-3">Timing & Rhythm</h3>
+                <p class="lead">
+                  Master the foundation of all music. Learn to play with a metronome, understand different time signatures, and
+                  develop solid internal timing that keeps the band together.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-content text-center p-5">
+                <i class="bi bi-diagram-3 carousel-icon mb-4"></i>
+                <h3 class="mb-3">Coordination</h3>
+                <p class="lead">
+                  Train your hands and feet to work together. Build independence between limbs through exercises and patterns that
+                  become second nature with practice.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-content text-center p-5">
+                <i class="bi bi-soundwave carousel-icon mb-4"></i>
+                <h3 class="mb-3">Groove & Feel</h3>
+                <p class="lead">
+                  Learn what makes people move. Explore different styles from rock to funk, understanding how subtle changes
+                  create different grooves and musical feelings.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="carousel-content text-center p-5">
+                <i class="bi bi-star carousel-icon mb-4"></i>
+                <h3 class="mb-3">Confidence</h3>
+                <p class="lead">
+                  Build the self-assurance to play with others. Learn to trust your skills, recover from mistakes, and express
+                  yourself freely through the drums.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">Gallery</h2>
+          <p class="lead">Here are some examples of my playing and teaching</p>
+        </div>
+
+        <!-- Gallery photos from assets/images/gallery -->
+        <div class="row g-4">
+          <!-- Photo 1: Live Gig -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal1">
+              <img src="assets/images/gallery/gig-2.webp" alt="Live drumming performance" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 2: Studio Setup -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal2">
+              <img src="assets/images/gallery/studio.webp" alt="Drum studio setup" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 3: Recording Session -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal3">
+              <img src="assets/images/gallery/recording.webp" alt="Recording session" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 4: Live Gig 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal4">
+              <img src="assets/images/gallery/gig-3.webp" alt="Live performance" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 5: Gig Performance -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal5">
+              <img src="assets/images/gallery/gig-4.webp" alt="Drumming at a gig" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 6: Dario Profile -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal6">
+              <img src="assets/images/gallery/dario-profile.webp" alt="Dario playing drums" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 7: Gig Performance 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal7">
+              <img src="assets/images/gallery/gig-1.webp" alt="Live gig performance" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 8: Gig Performance 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal8">
+              <img src="assets/images/gallery/gig-5.webp" alt="Drumming at live event" class="gallery-image" />
+            </div>
+          </div>
+
+          <!-- Photo 9: Gig Performance 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal9">
+              <img src="assets/images/gallery/gig-6.webp" alt="Live performance on stage" class="gallery-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">Frequently Asked Questions</h2>
+          <p class="lead">Everything you need to know before starting</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="accordion custom-accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Do I need my own drum kit at home?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Not at first! You can start with a practice pad, which is affordable and quiet. As you progress, I'll help you
+                    choose the right kit for your needs and budget. During our in person lessons, you will use my drum kit.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Can I start as an adult beginner?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Absolutely! You're never too old to start. Adults often progress quickly because they're focused and
+                    motivated. I tailor lessons to your goals and learning style.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Where do the lessons take place?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    All lessons are in person at my home place where I set up a mini music studio. The space is comfortable,
+                    quiet, and fully equipped with a professional drum kit and practice materials. Location details will be shared
+                    when you book your first lesson.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    How long is one lesson?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Standard lessons range from 30 to 45 minutes, perfect for focused learning without overwhelming beginners. We
+                    can adjust the length based on your age, attention span, and goals. Trial lessons are typically 30 minutes.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    How much do lessons cost?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Lessons are priced at
+                    <strong>€30 for 30 minutes</strong>
+                    or
+                    <strong>€40 for 45 minutes</strong>
+                    . These prices are aligned with the average rates for private drum lessons in Ireland, ensuring fair and
+                    competitive pricing for quality instruction.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    What styles of music do you teach?
+                  </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    I teach a wide range of styles including rock, pop, funk, blues, and more. We'll focus on what interests you
+                    most while building strong fundamentals that apply to any genre. Bring your favorite songs and we'll work on
+                    them together!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3">Contact</h2>
+          <p class="lead">Ready to start your drumming journey? Get in touch!</p>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <h4>Email</h4>
+              <a href="mailto:dariocostarelli88@gmail.com" class="contact-link">dariocostarelli88@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/3530894270037" class="contact-link" target="_blank">+353 089 427 0037</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+            <div class="contact-card text-center">
+              <div class="contact-icon mb-3">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/nickdrake88/" class="contact-link" target="_blank">@nickdrake88</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-form-wrapper">
+              <h3 class="text-center mb-4">Send a Message</h3>
+              <form id="contactForm" action="https://formspree.io/f/xdkrnndw" method="POST" novalidate>
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="nameInput" name="name" required />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="emailInput" name="email" required />
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="messageInput" class="form-label">Message</label>
+                  <textarea class="form-control" id="messageInput" name="message" rows="5" required></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="bi bi-send me-2"></i>
+                  Send Message
+                </button>
+              </form>
+              <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                <i class="bi bi-check-circle me-2"></i>
+                Thank you! Your message has been sent.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row align-items-center mb-4">
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <a href="#contact" class="footer-link">
+              <i class="bi bi-envelope-plus me-2"></i>
+              Request a Drum Track
+            </a>
+          </div>
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <div class="footer-social">
+              <a
+                href="https://instagram.com/nickdrake88"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="Instagram"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <p class="footer-brand mb-0">
+              <i class="bi bi-music-note-beamed me-2"></i>
+              Drake Drum Studio
+            </p>
+          </div>
+        </div>
+        <div class="text-center footer-bottom">
+          <p class="footer-tagline mb-2">Professional Drum Lessons & Drum Tracks Recording in Ireland.</p>
+          <p class="footer-copyright mb-0">&copy; 2024 Drake Drum Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="bi bi-calendar-check me-2"></i>
+              Book a Trial Lesson
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-4">Ready to start your drumming journey? Book a 30-minute trial lesson to see if we're a good fit!</p>
+
+            <form id="bookingForm" novalidate>
+              <div class="mb-3">
+                <label for="bookingName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="bookingName" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="bookingEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="bookingEmail" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="bookingPhone" class="form-label">Phone (optional)</label>
+                <input type="tel" class="form-control" id="bookingPhone" />
+              </div>
+
+              <div class="mb-3">
+                <label for="bookingPreference" class="form-label">Lesson Type</label>
+                <select class="form-select" id="bookingPreference" required>
+                  <option value="">Choose...</option>
+                  <option value="individual">Individual (One-on-One)</option>
+                  <option value="group">Small Group</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="bookingMessage" class="form-label">Tell me about your experience (optional)</label>
+                <textarea class="form-control" id="bookingMessage" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beginner Modal -->
+    <div class="modal fade" id="beginnerModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="bi bi-music-note-beamed me-2"></i>
+              Beginner Basics
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead mb-3">Perfect for absolute beginners</p>
+            <p>
+              If you have never played drums before, this is where you start. We will cover all the fundamentals you need to feel
+              comfortable behind the kit.
+            </p>
+
+            <h6 class="mt-4 mb-3">What you will learn:</h6>
+            <ul>
+              <li>Proper grip and stick technique</li>
+              <li>Basic posture and sitting position</li>
+              <li>Understanding the drum kit parts</li>
+              <li>Simple beats in 4/4 time</li>
+              <li>Reading basic drum notation</li>
+              <li>Practicing with a metronome</li>
+            </ul>
+
+            <p class="mt-4">
+              <strong>Duration:</strong>
+              30-45 minutes per lesson
+            </p>
+            <p>
+              <strong>Location:</strong>
+              In person at my teaching studio
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#bookingModal"
+            >
+              Book a trial lesson
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Groove & Timing Modal -->
+    <div class="modal fade" id="grooveModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="bi bi-clock-history me-2"></i>
+              Groove & Timing
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead mb-3">Develop solid rhythm and musical feel</p>
+            <p>Once you have the basics, it's time to work on your groove. This is what makes drumming musical and fun.</p>
+
+            <h6 class="mt-4 mb-3">What you will learn:</h6>
+            <ul>
+              <li>Playing in time with a metronome</li>
+              <li>Exploring different music styles (rock, pop, funk, blues)</li>
+              <li>Building independence between hands and feet</li>
+              <li>Creating dynamic variation</li>
+              <li>Understanding subdivision and tempo</li>
+              <li>Developing your personal feel and touch</li>
+            </ul>
+
+            <p class="mt-4">
+              <strong>Duration:</strong>
+              30-45 minutes per lesson
+            </p>
+            <p>
+              <strong>Location:</strong>
+              In person at my teaching studio
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#bookingModal"
+            >
+              Book a trial lesson
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Songs Modal -->
+    <div class="modal fade" id="songsModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="bi bi-vinyl me-2"></i>
+              Play Along with Songs
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead mb-3">Learn your favorite songs step by step</p>
+            <p>
+              This is where drumming gets really exciting. We break down real songs and learn to play them from start to finish.
+            </p>
+
+            <h6 class="mt-4 mb-3">What you will learn:</h6>
+            <ul>
+              <li>How to listen and identify drum parts</li>
+              <li>Breaking down songs into sections</li>
+              <li>Learning fills, transitions, and accents</li>
+              <li>Building a repertoire of songs you love</li>
+              <li>Playing along with backing tracks</li>
+              <li>Preparing for jam sessions or bands</li>
+            </ul>
+
+            <p class="mt-4">
+              <strong>Duration:</strong>
+              30-45 minutes per lesson
+            </p>
+            <p>
+              <strong>Location:</strong>
+              In person at my teaching studio
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#bookingModal"
+            >
+              Book a trial lesson
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modals -->
+    <!-- Gallery Modal 1 -->
+    <div class="modal fade" id="galleryModal1" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Live Performance</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-2.webp" alt="Live drumming performance" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 2 -->
+    <div class="modal fade" id="galleryModal2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Studio Setup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/studio.webp" alt="Drum studio setup" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 3 -->
+    <div class="modal fade" id="galleryModal3" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Recording Session</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/recording.webp" alt="Recording session" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 4 -->
+    <div class="modal fade" id="galleryModal4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Live Gig</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-3.webp" alt="Live performance" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 5 -->
+    <div class="modal fade" id="galleryModal5" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Drumming Performance</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-4.webp" alt="Drumming at a gig" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 6 -->
+    <div class="modal fade" id="galleryModal6" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Dario at the Drums</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/dario-profile.webp" alt="Dario playing drums" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 7 -->
+    <div class="modal fade" id="galleryModal7" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Live Performance</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-1.webp" alt="Live gig performance" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 8 -->
+    <div class="modal fade" id="galleryModal8" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Stage Performance</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-5.webp" alt="Drumming at live event" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal 9 -->
+    <div class="modal fade" id="galleryModal9" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Live on Stage</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="assets/images/gallery/gig-6.webp" alt="Live performance on stage" class="img-fluid w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/script.js"></script>
+  </body>
+</html>

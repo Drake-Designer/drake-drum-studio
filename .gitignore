@@ -1,0 +1,46 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+.cache/
+.temp/
+.tmp/
+parcel-cache/
+.rollup.cache/
+.next/
+.nuxt/
+.vite/
+coverage/
+
+# Environment files
+.env
+.env.*
+*.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# npm / yarn cache
+.npm/
+.yarn/
+.pnp.*
