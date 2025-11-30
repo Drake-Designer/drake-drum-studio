@@ -4,7 +4,7 @@ A modern, responsive landing page for Drake Drum Studio, offering private drum l
 
 ## 🌐 Live Demo
 
-**Visit the website:** [https://drake-designer.github.io/drake-drum-studio/](https://drake-designer.github.io/drake-drum-studio/)
+**Visit the website:** [https://drake-designer.github.io/drake-drum-studio/](https://drake-designer.github.io/Drake-Drum-Studio)
 
 ## 📋 About
 
@@ -36,5 +36,5 @@ This is a static website with no backend or database.
 
 ## 📞 Contact
 
-For drum lessons or more information, visit the [live website](https://drake-designer.github.io/drake-drum-studio/) and use the contact form or social media links provided.
+For drum lessons or more information, visit the [live website](https://drake-designer.github.io/Drake-Drum-Studio) and use the contact form or social media links provided.
 
