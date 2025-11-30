@@ -31,6 +31,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
+
   <body>
     <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -44,9 +45,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#recording">Recording</a></li>
             <li class="nav-item"><a class="nav-link" href="#lessons">Lessons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -59,91 +60,94 @@
     <section id="hero" class="hero-section">
       <div class="container">
         <div class="row align-items-center py-5">
-          <div class="col-lg-6 hero-content">
-            <h1 class="hero-title mb-4">Private drum lessons for beginners</h1>
-            <p class="hero-subtitle mb-5">
-              In person drum lessons for beginners in a relaxed and friendly environment. Learn timing, coordination, and rhythm
-              at your own pace.
-            </p>
-            <div class="hero-buttons">
-              <button class="btn btn-primary btn-lg me-3 mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
-                <i class="bi bi-calendar-check me-2"></i>
-                Book a trial lesson
-              </button>
-              <button class="btn btn-outline-light btn-lg mb-3" onclick="smoothScroll('#lessons')">
-                <i class="bi bi-arrow-down-circle me-2"></i>
-                Learn more
-              </button>
+          <div class="col-lg-6">
+            <div class="hero-content-wrapper">
+              <h1 class="hero-title mb-4">Private drum lessons for beginners</h1>
+              <p class="hero-subtitle mb-5">
+                In person drum lessons for beginners in a relaxed and friendly environment. Learn timing, coordination, and rhythm
+                at your own pace. I also record professional drum parts for original songs and covers.
+              </p>
+              <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg me-3 mb-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  <i class="bi bi-calendar-check me-2"></i>
+                  Book a trial lesson
+                </button>
+                <button class="btn btn-outline-light btn-lg mb-3" onclick="smoothScroll('#lessons')">
+                  <i class="bi bi-arrow-down-circle me-2"></i>
+                  Learn more
+                </button>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-video-wrapper">
-              <button class="video-unmute-btn" id="unmuteBtn" aria-label="Unmute video">
-                <i class="bi bi-volume-mute"></i>
-              </button>
-              <video autoplay muted loop playsinline preload="auto" controls class="hero-video" id="heroVideo">
-                <source src="assets/videos/hero/video-mix.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div class="hero-video-grid">
+              <div class="row g-3">
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/airbag-killer.mp4">
+                    <video src="assets/videos/airbag-killer.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Airbag</div>
+                      <div class="video-title">Killer</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/airbag-machines-and-men.mp4">
+                    <video src="assets/videos/airbag-machines-and-men.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Airbag</div>
+                      <div class="video-title">Machines and Men</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/deftones-cut-hands.mp4">
+                    <video src="assets/videos/deftones-cut-hands.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Deftones</div>
+                      <div class="video-title">Cut Hands</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/deftones-digital-bath.mp4">
+                    <video src="assets/videos/deftones-digital-bath.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Deftones</div>
+                      <div class="video-title">Digital Bath</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/janis-joplin-try.mp4">
+                    <video src="assets/videos/janis-joplin-try.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Janis Joplin</div>
+                      <div class="video-title">Try</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="video-card" data-video-src="assets/videos/massive-attack-teardrops.mp4">
+                    <video src="assets/videos/massive-attack-teardrops.mp4" muted></video>
+                    <span class="play-overlay"><i class="bi bi-play-fill"></i></span>
+                    <div class="video-info">
+                      <div class="video-artist">Massive Attack</div>
+                      <div class="video-title">Teardrops</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="hero-gradient"></div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-title mb-4">About Drake Drum Studio</h2>
-            <p class="lead mb-4">
-              Hello! My name is Dario, and I'm an Italian drummer based in Ireland. I started my drumming journey at age 16, and
-              I've been passionate about music and drumming ever since!
-            </p>
-            <p class="mb-4">
-              I studied at a drum academy in Sicily and continued learning as a self-taught drummer. Over the years, I've gained
-              valuable experience playing live gigs and recording in home studios. Now, I'm excited to share my love for drumming
-              with beginners in a fun, relaxed, and encouraging environment.
-            </p>
-            <p class="mb-4">
-              Whether you want to play your favorite songs, jam with friends, or simply explore rhythm and groove, I'll guide you
-              step by step. Let's make music together!
-            </p>
-          </div>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="highlight-card text-center">
-              <div class="highlight-icon">
-                <i class="bi bi-music-note-list"></i>
-              </div>
-              <h4>Live Gigs</h4>
-              <p>Years of experience performing with bands in various genres</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="highlight-card text-center">
-              <div class="highlight-icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <h4>Home Studio</h4>
-              <p>Professional recording experience and production knowledge</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="highlight-card text-center">
-              <div class="highlight-icon">
-                <i class="bi bi-heart"></i>
-              </div>
-              <h4>Beginner-Friendly</h4>
-              <p>Patient teaching focused on building confidence and having fun</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Recording Services Section -->
@@ -322,6 +326,60 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-title mb-4">About Drake Drum Studio</h2>
+            <p class="lead mb-4">
+              Hello! My name is Dario, and I'm an Italian drummer based in Ireland. I started my drumming journey at age 16, and
+              I've been passionate about music and drumming ever since!
+            </p>
+            <p class="mb-4">
+              I studied at a drum academy in Sicily and continued learning as a self-taught drummer. Over the years, I've gained
+              valuable experience playing live gigs and recording in home studios. Now, I'm excited to share my love for drumming
+              with beginners in a fun, relaxed, and encouraging environment.
+            </p>
+            <p class="mb-4">
+              Whether you want to play your favorite songs, jam with friends, or simply explore rhythm and groove, I'll guide you
+              step by step. Let's make music together!
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-music-note-list"></i>
+              </div>
+              <h4>Live Gigs</h4>
+              <p>Years of experience performing with bands in various genres</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h4>Home Studio</h4>
+              <p>Professional recording experience and production knowledge</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="highlight-card text-center">
+              <div class="highlight-icon">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h4>Beginner-Friendly</h4>
+              <p>Patient teaching focused on building confidence and having fun</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Carousel Section -->
     <section class="carousel-section py-5">
       <div class="container">
@@ -401,7 +459,6 @@
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="section-title mb-3">Gallery</h2>
-          <p class="lead">Here are some examples of my playing and teaching</p>
         </div>
 
         <!-- Gallery photos from assets/images/gallery -->
@@ -441,10 +498,10 @@
             </div>
           </div>
 
-          <!-- Photo 6: Dario Profile -->
+          <!-- Photo 6: Thinkpunk Gig -->
           <div class="col-lg-4 col-md-6">
             <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal6">
-              <img src="assets/images/gallery/dario-profile.webp" alt="Dario playing drums" class="gallery-image" />
+              <img src="assets/images/gallery/thinkpunk-gig.webp" alt="Thinkpunk live performance" class="gallery-image" />
             </div>
           </div>
 
@@ -706,15 +763,6 @@
               </div>
 
               <div class="mb-3">
-                <label for="bookingPreference" class="form-label">Lesson Type</label>
-                <select class="form-select" id="bookingPreference" name="lesson_type" required>
-                  <option value="">Choose...</option>
-                  <option value="individual">Individual (One-on-One)</option>
-                  <option value="group">Small Group</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
                 <label for="bookingMessage" class="form-label">Tell me about your experience (optional)</label>
                 <textarea class="form-control" id="bookingMessage" name="experience" rows="3"></textarea>
               </div>
@@ -879,6 +927,22 @@
     </div>
 
     <!-- Gallery Modals -->
+    <!-- Hero Video Grid Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalLabel">Video</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <video id="gridVideo" class="w-100" controls playsinline></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modals -->
     <!-- Gallery Modal 1 -->
     <div class="modal fade" id="galleryModal1" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -959,11 +1023,11 @@
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Dario at the Drums</h5>
+            <h5 class="modal-title">Thinkpunk Live</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body p-0">
-            <img src="assets/images/gallery/dario-profile.webp" alt="Dario playing drums" class="img-fluid w-100" />
+            <img src="assets/images/gallery/thinkpunk-gig.webp" alt="Thinkpunk live performance" class="img-fluid w-100" />
           </div>
         </div>
       </div>

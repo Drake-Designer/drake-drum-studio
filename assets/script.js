@@ -187,16 +187,23 @@ if (bookingForm) {
         });
 
         if (response.ok) {
-          // Success - close modal
-          const modal = bootstrap.Modal.getInstance(document.getElementById('bookingModal'));
+          // Success - close modal properly
+          const bookingModalEl = document.getElementById('bookingModal');
+          const modal = bootstrap.Modal.getInstance(bookingModalEl);
           if (modal) {
             modal.hide();
           }
 
-          // Show personalized success notification
-          showNotification(
-            'success',
-            `Thank you, ${userName}! Your trial lesson request has been submitted. I will contact you soon.`
+          // Wait for modal to fully close before showing notification
+          bookingModalEl.addEventListener(
+            'hidden.bs.modal',
+            function () {
+              showNotification(
+                'success',
+                `Thank you, ${userName}! Your trial lesson request has been submitted. I will contact you soon.`
+              );
+            },
+            { once: true }
           );
 
           // Reset form
@@ -213,6 +220,30 @@ if (bookingForm) {
     }
   });
 }
+
+// Clean up booking modal on close to prevent freezing
+document.addEventListener('DOMContentLoaded', function () {
+  const bookingModalEl = document.getElementById('bookingModal');
+  if (bookingModalEl) {
+    bookingModalEl.addEventListener('hidden.bs.modal', function () {
+      const form = this.querySelector('#bookingForm');
+      if (form) {
+        // Reset form state without causing reflow
+        setTimeout(() => {
+          form.classList.remove('was-validated');
+        }, 100);
+      }
+      // Remove backdrop if stuck
+      const backdrop = document.querySelector('.modal-backdrop');
+      if (backdrop) {
+        backdrop.remove();
+      }
+      // Restore body scroll
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    });
+  }
+});
 
 // ========================================
 // NAVBAR SCROLL EFFECT
@@ -315,6 +346,52 @@ window.addEventListener('scroll', function () {
 });
 
 // ========================================
+// HERO VIDEO GRID MODAL HANDLERS
+// ========================================
+document.addEventListener('DOMContentLoaded', function () {
+  const videoCards = document.querySelectorAll('.video-card');
+  const videoModalEl = document.getElementById('videoModal');
+  const videoEl = document.getElementById('gridVideo');
+  const videoModalLabel = document.getElementById('videoModalLabel');
+
+  if (videoCards.length && videoModalEl && videoEl) {
+    const bsVideoModal = new bootstrap.Modal(videoModalEl);
+
+    videoCards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const src = card.getAttribute('data-video-src');
+        if (!src) return;
+
+        // Get artist and title from the card
+        const artistEl = card.querySelector('.video-artist');
+        const titleEl = card.querySelector('.video-title');
+        const artist = artistEl ? artistEl.textContent : '';
+        const title = titleEl ? titleEl.textContent : '';
+
+        // Update modal title
+        if (videoModalLabel && artist && title) {
+          videoModalLabel.textContent = `${artist} - ${title}`;
+        }
+
+        // Set source and play
+        videoEl.src = src;
+        videoEl.currentTime = 0;
+        videoEl.play().catch(() => {});
+        bsVideoModal.show();
+      });
+    });
+
+    // Cleanup when modal hides
+    videoModalEl.addEventListener('hidden.bs.modal', () => {
+      videoEl.pause();
+      videoEl.currentTime = 0;
+      videoEl.removeAttribute('src');
+      // Don't call videoEl.load() - it causes freezing
+    });
+  }
+});
+
+// ========================================
 // KEYBOARD NAVIGATION FOR MODALS
 // ========================================
 document.addEventListener('keydown', function (e) {
@@ -351,13 +428,19 @@ document.addEventListener('DOMContentLoaded', function () {
 // ========================================
 // PARALLAX EFFECT FOR HERO GRADIENT
 // ========================================
+let ticking = false;
+
 window.addEventListener('scroll', function () {
   const heroGradient = document.querySelector('.hero-gradient');
 
-  if (heroGradient) {
-    const scrolled = window.pageYOffset;
-    const parallax = scrolled * 0.5;
-    heroGradient.style.transform = `translateY(${parallax}px)`;
+  if (heroGradient && !ticking) {
+    window.requestAnimationFrame(() => {
+      const scrolled = window.pageYOffset;
+      const parallax = scrolled * 0.5;
+      heroGradient.style.transform = `translateY(${parallax}px)`;
+      ticking = false;
+    });
+    ticking = true;
   }
 });
 
