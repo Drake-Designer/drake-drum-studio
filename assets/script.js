@@ -362,15 +362,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const src = card.getAttribute('data-video-src');
         if (!src) return;
 
-        // Get artist and title from the card
-        const artistEl = card.querySelector('.video-artist');
-        const titleEl = card.querySelector('.video-title');
-        const artist = artistEl ? artistEl.textContent : '';
-        const title = titleEl ? titleEl.textContent : '';
-
-        // Update modal title
-        if (videoModalLabel && artist && title) {
-          videoModalLabel.textContent = `${artist} - ${title}`;
+        // Get label from data-video-label attribute (fallback to artist/title elements)
+        const label = card.getAttribute('data-video-label');
+        if (label && videoModalLabel) {
+          videoModalLabel.textContent = label;
+        } else {
+          // Fallback: get artist and title from the card elements
+          const artistEl = card.querySelector('.video-artist');
+          const titleEl = card.querySelector('.video-title');
+          const artist = artistEl ? artistEl.textContent : '';
+          const title = titleEl ? titleEl.textContent : '';
+          if (videoModalLabel && artist && title) {
+            videoModalLabel.textContent = `${artist} - ${title}`;
+          }
         }
 
         // Set source and play
